@@ -1,0 +1,16 @@
+cp lorem/sed.txt lorem-copy/sed.txt
+cp lorem/at.txt/lorem.txt | cp lorem-copy/at.txt/lorem.txt
+cat at.txt | cat lorem.txt
+head -3 sed.txt
+tail -3 sed.txt
+nano sed.txt
+sed 's/et/ET/g' /Users/joel/datamex_082020/module-1/lab-bash/lorem/at.txt > /Users/joel/datamex_082020/module-1/lab-bash/lorem-copy/at.txt
+whoami
+ls *.txt
+cat sed.txt | wc sed.txt
+cat sed.txt | wc -l sed.txt
+ls *lorem | wc -l
+grep -o "et" at.txt
+grep -o "et" at.txt | wc -l
+df -th
+echo "¿Cómo te llamas?"; read name; echo "Qué onda $name"
