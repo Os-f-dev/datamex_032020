@@ -1,0 +1,76 @@
+$ echo "Hello World"
+
+$ mkdir new_dir
+
+$ rmdir new_dir
+
+$ cp sed.txt /c/ironhack/data-bootcamp/Lab/datamex_082020/module-1/lab-bash/lorem-copy
+
+$ cp lorem.txt /c/ironhack/data-bootcamp/Lab/datamex_082020/module-1/lab-bash/lorem-copy | cp at.txt /c/ironhack/data-bootcamp/Lab/datamex_082020/module-1/lab-bash/lorem-copy
+
+$ cd lorem
+
+$ cat sed.txt
+
+$ diff at.txt lorem.txt
+
+$ cd lorem-copy
+
+$ head -3 sed.txt
+
+$ tail -3 sed.txt
+
+$ nano sed.txt
+
+# add requested text
+
+ctrl + x
+
+y # to save changes
+
+$ tail -3 sed.txt
+
+$ cd ..
+
+$ cd lorem
+
+$ sed -i 's/et/ET/g' at.txt ; cp -i at.txt /c/ironhack/data-bootcamp/Lab/datamex_082020/module-1/lab-bash/lorem
+cp: overwrite '/c/ironhack/data-bootcamp/Lab/datamex_082020/module-1/lab-bash/lorem/at.txt'? y
+
+$ git config --list
+
+$ pwd
+
+$ cd /c/ironhack/data-bootcamp/Lab/datamex_082020/module-1/lab-bash/lorem ; ls *.txt
+
+$ cd /c/ironhack/data-bootcamp/Lab/datamex_082020/module-1/lab-bash/lorem ; cat sed.txt|wc -l sed.txt
+
+$ cd /c/ironhack/data-bootcamp/Lab/datamex_082020/module-1/lab-bash/lorem|ls -A|wc -l
+
+$ cd /c/ironhack/data-bootcamp/Lab/datamex_082020/module-1/lab-bash/lorem|grep --color et at.txt
+
+$ cd /c/ironhack/data-bootcamp/Lab/datamex_082020/module-1/lab-bash/lorem|grep -o et at.txt|wc -l
+
+$ cd /c/ironhack/data-bootcamp/Lab/datamex_082020/module-1/lab-bash/lorem-copy|grep -R et|wc -l
+
+$ vi /c/ironhack/data-bootcamp/Lab/datamex_082020/module-1/lab-bash/list_files.sh
+
+[i]
+
+python
+#!/bin/bash
+ls
+
+[ESC]
+
+[:wq]
+
+$ chmod a+x list_files.sh
+
+$ bash list_files.sh
+
+$ read NAME
+ABE
+
+$ echo "$NAME"
+ABE

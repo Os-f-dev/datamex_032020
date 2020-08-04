@@ -1,9 +1,45 @@
-Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
-totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
-Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, 
-sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
-Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
-Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, 
-nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, 
-vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+3D Objects/
+AppData/
+Application Data@
+bus.ipynb
+Contacts/
+Cookies@
+Desktop/
+Documents/
+Downloads/
+duel-of-sorcerers.ipynb
+Favorites/
+IntelGraphicsProfiles/
+Links/
+Local Settings@
+MicrosoftEdgeBackups/
+Music/
+My Documents@
+NetHood@
+new_folder/
+NTUSER.DAT
+ntuser.dat.LOG1
+ntuser.dat.LOG2
+NTUSER.DAT{c1400bbb-d2a7-11e9-ac28-acd564220779}.TM.blf
+NTUSER.DAT{c1400bbb-d2a7-11e9-ac28-acd564220779}.TMContainer00000000000000000001.regtrans-ms
+NTUSER.DAT{c1400bbb-d2a7-11e9-ac28-acd564220779}.TMContainer00000000000000000002.regtrans-ms
+ntuser.ini
+OneDrive/
+Pictures/
+Pre-work excercises.ipynb
+prework1/
+PrintHood@
+Recent@
+robin-hood.ipynb
+rock-paper-scissors.ipynb
+Saved Games/
+Searches/
+SendTo@
+snail-and-well.ipynb
+Start Menu@
+temperature.ipynb
+Templates@
+Untitled.ipynb
+Untitled1.ipynb
+Untitled2.ipynb
+Videos/
