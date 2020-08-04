@@ -1,0 +1,52 @@
+cd datamex_082020
+cd module-1
+cd lab-bash
+ls
+echo "Hello World"
+mkdir New_dir
+ls
+rm -r New_dir
+ls
+cp lorem/sed.txt lorem-copy/sed.txt
+cp lorem/at.txt lorem-copy/at.txt; cp lorem/lorem.txt lorem-copy/lorem.txt
+cd lorem
+cat sed.txt
+cat at.txt; cat lorem.txt
+cd ..
+cd lorem-copy
+head -3 sed.txt
+tail -3 sed.txt
+nano sed.txt #Modifica el archivo sed.txt
+tail -3 sed.txt
+cd ..
+cd lorem
+#nano at.txt
+#Ctrl+\
+cd .. 
+cp lorem/at.txt lorem-copy/at.txt
+git config --global user.name
+pwd
+cd lorem
+ls *txt
+cat sed.txt | wc sed.txt
+wc lorem*
+grep -o 'ET' at.txt
+grep -o 'ET' at.txt| wc
+cd ..
+grep -o 'ET' *|	wc
+********************************
+read Name
+#IngresaNombre
+echo $Name
+mkdir echo $Name
+rm -r echo $Name
+for x in *.txt
+do
+echo $x
+echo ${#x}
+done
+for x in *.txt
+do
+echo $x
+echo ${#x}
+done
