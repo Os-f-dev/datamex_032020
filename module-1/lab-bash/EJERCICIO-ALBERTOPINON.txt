@@ -1,0 +1,72 @@
+#EJERCICIOS
+
+echo "Hello World"
+
+mkdir new_dir
+
+rm -rf new_dir
+
+cp lorem/sed.txt lorem-copy/
+
+cp lorem/at.txt lorem-copy ; cp lorem/lorem.txt lorem-copy/
+
+cat lorem/sed.txt
+
+cat lorem/at.txt
+cat lorem/lorem.txt
+
+head -3 lorem-copy/sed.txt
+
+tail -3 lorem-copy/sed.txt
+
+nano lorem-copy/sed.txt
+	Homo homini lupus. -> ctrl + x -> Y -> ENTER
+
+tail -3 lorem-copy/sed.txt
+
+cd lorem/
+sed 's/et/ET/' lorem/at.txt ; cp lorem/at.txt lorem-copy/
+
+git config --list
+
+git branch --show-current
+
+ls lorem/*.txt
+
+cat lorem/sed.txt | wc -l lorem/sed.txt
+
+find lorem | wc -l
+
+grep --color 'et' lorem/at.txt
+
+grep -o 'et' lorem/at.txt | wc -l
+
+(grep -o 'et' lorem-copy/at.txt ; grep -o 'et' lorem-copy/sed.txt ; grep -o 'et' lorem-copy/lorem.txt) | wc -l
+
+#FICHEROS BASH
+
+vi list_files.sh
+bash list_files.sh
+
+#BONUS
+read NAME
+	Alberto
+
+echo $NAME
+
+makdir $NAME
+
+rm -rf $NAME
+
+cd lorem/
+for f in at.txt sed.txt lorem.txt
+do
+ VAR="${f%.*}"
+ echo " $VAR string length: ${#VAR}"
+done
+
+
+
+
+
+
