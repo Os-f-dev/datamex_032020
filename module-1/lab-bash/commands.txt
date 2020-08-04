@@ -1,0 +1,25 @@
+$ echo "Hello World"
+Hello World
+$ mkdir new_dir
+$ rmdir new_dir
+$ cp sed.txt /c/Users/HP/Desktop/datamex_082020/module-1/lab-bash/lorem-copy
+$ cp at.txt lorem.txt ~/Desktop/datamex_082020/module-1/lab-bash/lorem-copy
+$ cat sed.txt
+$ cat at.txt lorem.txt
+$ head -3 sed.txt
+$ tail -3 sed.txt
+$ nano sed.txt
+$ tail -3 sed.txt
+$ sed 's/et/ET/g' ~/Desktop/datamex_082020/module-1/lab-bash/lorem/at.txt > ~/Desktop/datamex_082020/module-1/lab-bash/lorem-copy/at.txt
+$ whoami
+$ pwd
+$ ls *.txt
+$ cat sed.txt | wc -l sed.txt
+$ ls -l | wc -l
+$ ls *lorem | wc -l
+$ grep -o et at.txt
+$ grep -o "et" at.txt | wc -l
+$ echo "¿Cómo te llamas?"; read name ; echo "Mi nombre es $name"
+$ echo $name
+$ mkdir $name
+$ rmdir $name
