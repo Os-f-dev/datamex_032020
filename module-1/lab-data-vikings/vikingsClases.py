@@ -44,14 +44,14 @@ class War():
         viking = self.vikingArmy[0]
         saxon = self.saxonArmy[0]
         damage = saxon.receiveDamage(viking.attack())
-        if saxon.health < 0:
+        if saxon.health <= 0:
             self.saxonArmy.pop(0)
         return damage
     def saxonAttack(self):
         viking = self.vikingArmy[0]
         saxon = self.saxonArmy[0]
         damage = viking.receiveDamage(saxon.attack())
-        if viking.health < 0:
+        if viking.health <= 0:
             self.vikingArmy.pop(0)
         return damage
     def showStatus(self):
