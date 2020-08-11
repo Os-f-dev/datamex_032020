@@ -18,8 +18,8 @@ rand_num = random.randint(0,10)
 
 codificacion=''.join(char_lst)
 
-#print(codificacion)
-#print(rand_num)
+print(codificacion)
+print(rand_num)
 
 while exit == False:
 
