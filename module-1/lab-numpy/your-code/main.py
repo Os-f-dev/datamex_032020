@@ -1,69 +1,66 @@
 #1. Import the NUMPY package under the name np.
 
-
+import numpy as np
 
 #2. Print the NUMPY version and the configuration.
-
-
+print('NUMPY version:',np.__version__)
+print('NUMPY configuration',np.show_config())
 
 #3. Generate a 2x3x5 3-dimensional array with random values. Assign the array to variable "a"
 # Challenge: there are at least three easy ways that use numpy to generate random arrays. How many ways can you find?
-
-
+a = np.random.random((2,3,5))
 
 #4. Print a.
-
-
+print(a)
 
 #5. Create a 5x2x3 3-dimensional array with all values equaling 1.
 #Assign the array to variable "b"
-
-
+b = np.ones((5,2,3))
 
 #6. Print b.
-
-
+print(b)
 
 #7. Do a and b have the same size? How do you prove that in Python code?
-
-
-
+print('a shape:', a.shape)
+print('b shape:', b.shape)
+# a and b does't have the same size
 
 #8. Are you able to add a and b? Why or why not?
-
+#print('sum a + b:'a + b)
+# you cannot sum a + b because they don't have the same dimensions
 
 
 #9. Transpose b so that it has the same structure of a (i.e. become a 2x3x5 array). Assign the transposed array to varialbe "c".
-
-
+#c = b.T no funciona porque arrojaria un shape de 3x2x5
+c =np.moveaxis(b,0,-1)
+print('c shape:',c.shape)
 
 #10. Try to add a and c. Now it should work. Assign the sum to varialbe "d". But why does it work now?
-
-
+d = a + c
+#Now it works because we have the same shape on a and d
 
 #11. Print a and d. Notice the difference and relation of the two array in terms of the values? Explain.
-
-
-
+print('a shape:', a.shape)
+print('d shape:', d.shape)
+print(a)
+print(d)
 
 #12. Multiply a and c. Assign the result to e.
-
-
+e = a*c
 
 #13. Does e equal to a? Why or why not?
-
-
-
+print('e values:\n',e)
+#yes because the * operand multiplys the corresponding element of a by e
 
 #14. Identify the max, min, and mean values in d. Assign those values to variables "d_max", "d_min", and "d_mean"
-
-
-
-
+print('d max value: ', d.max())
+print('d min value: ', d.min())
+print('d mean value: ', d.mean())
+d_max = d.max()
+d_min = d.min()
+d_mean = d.mean()
 #15. Now we want to label the values in d. First create an empty array "f" with the same shape (i.e. 2x3x5) as d using `np.empty`.
-
-
-
+f = np.empty((2,3,5))
 
 """
 #16. Populate the values in f. For each value in d, if it's larger than d_min but smaller than d_mean, assign 25 to the corresponding value in f.
@@ -74,9 +71,19 @@ Assign 100 to the corresponding value(s) in f for d_max in d.
 In the end, f should have only the following values: 0, 25, 50, 75, and 100.
 Note: you don't have to use Numpy in this question.
 """
-
-
-
+for i in range(0,2):
+    for j in range(0,3):
+        for k in range(0,5):
+            if d[i,j,k] > d_min and d[i,j,k] < d_mean:
+                f[i,j,k] = 25
+            elif d[i,j,k] >d_mean and d[i,j,k] <d_max:
+                f[i,j,k] = 75
+            elif d[i,j,k] == d_mean:
+                f[i,j,k] = 50
+            elif d[i,j,k] == d_min:
+                f[i,j,k] = 0
+            elif d[i,j,k] == d_max:
+                f[i,j,k] = 100
 
 """
 #17. Print d and f. Do you have your expected f?
@@ -98,7 +105,8 @@ array([[[ 75.,  75.,  75.,  25.,  75.],
         [ 75.,  75.,  75.,  75.,  75.],
         [ 25.,  75.,   0.,  75.,  75.]]])
 """
-
+print('\nd array:\n',d)
+print('\nf array:\n',f)
 
 """
 #18. Bonus question: instead of using numbers (i.e. 0, 25, 50, 75, and 100), how to use string values 
@@ -112,3 +120,19 @@ array([[[ 'D',  'D',  'D',  'B',  'D'],
         [ 'B',  'D',   'A',  'D', 'D']]])
 Again, you don't need Numpy in this question.
 """
+f_2=f.astype(str)
+for i in range(0,2):
+    for j in range(0,3):
+        for k in range(0,5):
+            if d[i,j,k] > d_min and d[i,j,k] < d_mean:
+                f_2[i,j,k] = 'B'
+            elif d[i,j,k] >d_mean and d[i,j,k] <d_max:
+                f_2[i,j,k] = 'D'
+            elif d[i,j,k] == d_mean:
+                f_2[i,j,k] = 'C'
+            elif d[i,j,k] == d_min:
+                f_2[i,j,k] = 'A'
+            elif d[i,j,k] == d_max:
+                f_2[i,j,k] = 'E'
+
+print('\nNew f array:\n',f_2)
