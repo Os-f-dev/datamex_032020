@@ -8,7 +8,7 @@ SELECT ti.title_id AS TITLE_ID, ta.au_id AS AUTHOR_ID,
 advance
 FROM sales as sa
 LEFT JOIN titles ti USING (title_id)
-LEFT JOIN titleauthor ta USING (title_id))
+LEFT JOIN titleauthor ta USING (title_id));
 
     
 /*Step 2: Aggregate the total royalties for each title for each author*/
