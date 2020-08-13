@@ -71,9 +71,17 @@ Assign 100 to the corresponding value(s) in f for d_max in d.
 In the end, f should have only the following values: 0, 25, 50, 75, and 100.
 Note: you don't have to use Numpy in this question.
 """
-for i in range(0,2):
-    for j in range(0,3):
-        for k in range(0,5):
+
+f[(d==d_min)] = 0
+f[(d>d_min) & (d<d_mean)] = 25
+f[(d==d_mean)] = 50
+f[(d<d_max) & (d>d_mean)] = 75
+f[(d==d_max)] = 100
+
+'''
+for i in range(0,d.shape[0]):
+    for j in range(0,d.shape[1]):
+        for k in range(0,d.shape[2]):
             if d[i,j,k] > d_min and d[i,j,k] < d_mean:
                 f[i,j,k] = 25
             elif d[i,j,k] >d_mean and d[i,j,k] <d_max:
@@ -84,7 +92,7 @@ for i in range(0,2):
                 f[i,j,k] = 0
             elif d[i,j,k] == d_max:
                 f[i,j,k] = 100
-
+'''
 """
 #17. Print d and f. Do you have your expected f?
 For instance, if your d is:
