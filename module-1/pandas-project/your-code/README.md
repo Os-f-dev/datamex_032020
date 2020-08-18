@@ -1,0 +1,7 @@
+Primero importé las bibliotecas que iba a necesitar como pandas, para poder hacer la limpieza del archivo. Inmediatamente después importé el archivo y lo desplegué para poder visualizarlo.
+Una vez importado, localicé los nulos para después marcarlos con un ‘no record’.
+Después desplegué en lista las columnas que tenía, lo que me hizo darme cuenta de dos columnas que no hacían referencia a nada (Unnamed 22 y 23), por lo que desplegué la información que tenían y al darme cuenta que los datos que contenían eran muy pocos y realmente no aportaban nada a la tabla, las eliminé.
+Posteriormente, comprobé que las tres columnas de Case Number no fueran iguales, con lo que me di cuenta que realmente diferían en una muy pequeña proporción del total de datos que ofrecían. Sin embargo decidí no borrarlas, en caso de que esas diferencias pudieran resultar útiles en algún análisis posterior de la tabla.
+Tras terminar con esas columnas, empecé a limpiar el resto de las columnas y a renombrar algunas que contenían espacios al final del nombre, lo que podría obstaculizar su tratamiento, además de poner todos los valores en mayúsculas.
+En el caso de columnas como Sex o Type, procuré que las respuestas se limitaran a las dos opciones naturales que debe contener la columna, como “Y” o “N”, así como la de “UNKNOWN”.
+En el caso de la columna “Name” eliminé algunas respuestas que decían “MALE” o “FEMALE”.
