@@ -1,0 +1,27 @@
+USE pubs1
+/*Step 1*/
+/*SELECT titleauthor.title_id as "Title ID",
+titleauthor.au_id as "Author ID",
+(titles.price * sales.qty * titles.royalty / 100 * titleauthor.royaltyper / 100) AS "SALES ROYALTY"
+FROM titleauthor
+LEFT JOIN titles ON titleauthor.title_id = titles.title_id
+LEFT JOIN sales ON titles.title_id = sales.title_id;*/
+
+/*Step 2*/
+/*SELECT titleauthor.title_id as "Title ID",
+titleauthor.au_id as "Author ID",
+SUM(titles.price * sales.qty * titles.royalty / 100 * titleauthor.royaltyper / 100) AS "SALES ROYALTY"
+FROM titleauthor
+LEFT JOIN titles ON titleauthor.title_id = titles.title_id
+LEFT JOIN sales ON titles.title_id = sales.title_id
+GROUP BY titleauthor.au_id, titleauthor.title_id;*/
+
+/*Step 3*/
+/*SELECT titleauthor.au_id as "Author ID",
+SUM(titles.price * sales.qty * titles.royalty / 100 * titleauthor.royaltyper / 100) AS "PROFIT"
+FROM titleauthor
+LEFT JOIN titles ON titleauthor.title_id = titles.title_id
+LEFT JOIN sales ON titles.title_id = sales.title_id
+GROUP BY titleauthor.au_id
+ORDER BY PROFIT DESC
+LIMIT 3;*/
