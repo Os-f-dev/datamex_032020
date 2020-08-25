@@ -1,0 +1,205 @@
+Last login: Tue Aug  4 18:08:19 on ttys001
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+(base) MacBook-Pro-Menazina:~ Menazina$ git init
+Reinitialized existing Git repository in /Users/Menazina/.git/
+(base) MacBook-Pro-Menazina:~ Menazina$ lls
+-bash: lls: command not found
+(base) MacBook-Pro-Menazina:~ Menazina$ ls
+Applications		Library			data-prework
+Creative Cloud Files	Movies			datamex_082020
+Desktop			Music			hola.sh
+Documents		Pictures		opt
+Downloads		Public			super-duper-robot
+Dropbox			Sites
+(base) MacBook-Pro-Menazina:~ Menazina$ ls -l/Users/Menazina/datamex_082020
+ls: illegal option -- /
+usage: ls [-@ABCFGHLOPRSTUWabcdefghiklmnopqrstuwx1%] [file ...]
+(base) MacBook-Pro-Menazina:~ Menazina$ -l/Users/Menazina/.DS_Store
+-bash: -l/Users/Menazina/.DS_Store: No such file or directory
+(base) MacBook-Pro-Menazina:~ Menazina$ pwd
+/Users/Menazina
+(base) MacBook-Pro-Menazina:~ Menazina$ cd datamex_082020
+(base) MacBook-Pro-Menazina:datamex_082020 Menazina$ cd module-1
+(base) MacBook-Pro-Menazina:module-1 Menazina$ cd lab-bash
+(base) MacBook-Pro-Menazina:lab-bash Menazina$ ls
+README.md	inputs		lorem-copy
+exercices	lorem		outputs
+(base) MacBook-Pro-Menazina:lab-bash Menazina$ echo "Hello World"
+Hello World
+(base) MacBook-Pro-Menazina:lab-bash Menazina$ mk dir new_dir
+-bash: mk: command not found
+(base) MacBook-Pro-Menazina:lab-bash Menazina$ mkdir new:dir
+(base) MacBook-Pro-Menazina:lab-bash Menazina$ mkdir new_dir
+(base) MacBook-Pro-Menazina:lab-bash Menazina$ rm rf new_dir
+rm: rf: No such file or directory
+rm: new_dir: is a directory
+(base) MacBook-Pro-Menazina:lab-bash Menazina$ rm -rf new_dir
+(base) MacBook-Pro-Menazina:lab-bash Menazina$ cp lorem-copy/sed.txt
+usage: cp [-R [-H | -L | -P]] [-fi | -n] [-apvXc] source_file target_file
+       cp [-R [-H | -L | -P]] [-fi | -n] [-apvXc] source_file ... target_directory
+(base) MacBook-Pro-Menazina:lab-bash Menazina$ cp lorem/at.txt lorem-copy/at.txt| cp lorem/lorem.txt lorem-copy/lorem.txt
+(base) MacBook-Pro-Menazina:lab-bash Menazina$ cd lorem
+(base) MacBook-Pro-Menazina:lorem Menazina$ cat sed.txt
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
+sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur,
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?(base) MacBook-Pro-Menazina:lorem Menazina$ cat at.txt
+At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
+deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non
+provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
+Et harum quidem rerum facilis est et expedita distinctio.
+Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod
+maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet
+ut et voluptates repudiandae sint et molestiae non recusandae.
+Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores
+alias consequatur aut perferendis doloribus asperiores repellat(base) MacBook-Pro-Menazina:lorem Menazina$ cat lorem.txt
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.(base) MacBook-Pro-Menazina:lorem Menazina$ cd lorem-copu
+-bash: cd: lorem-copu: No such file or directory
+(base) MacBook-Pro-Menazina:lorem Menazina$ cd lorem-copy
+-bash: cd: lorem-copy: No such file or directory
+(base) MacBook-Pro-Menazina:lorem Menazina$ cd lorem-copy
+-bash: cd: lorem-copy: No such file or directory
+(base) MacBook-Pro-Menazina:lorem Menazina$ cd ..
+(base) MacBook-Pro-Menazina:lab-bash Menazina$ cd lorem-copy
+(base) MacBook-Pro-Menazina:lorem-copy Menazina$ head-3 sed.txt
+-bash: head-3: command not found
+(base) MacBook-Pro-Menazina:lorem-copy Menazina$ cat head-3 sed.txt
+cat: head-3: No such file or directory
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
+sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur,
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?(base) MacBook-Pro-Menazina:lorem-copy Menazina$ head -3 sed.txt
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+(base) MacBook-Pro-Menazina:lorem-copy Menazina$ tail-3 sed.txt
+-bash: tail-3: command not found
+(base) MacBook-Pro-Menazina:lorem-copy Menazina$ tail -3 sed.txt
+Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
+nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur,
+(base) MacBook-Pro-Menazina:lorem-copy Menazina$ nano sed.txt
+(base) MacBook-Pro-Menazina:lorem-copy Menazina$ tail -3 sed.txt
+vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?Homo homini lupus.
+
+
+(base) MacBook-Pro-Menazina:lorem-copy Menazina$ sed -i -e 's/et/ET/g' at.txt
+(base) MacBook-Pro-Menazina:lorem-copy Menazina$ git config --list --global
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+user.name=Jimena Aparicio
+user.email=68874255+Menazina@users.noreply.github.com
+(base) MacBook-Pro-Menazina:lorem-copy Menazina$ df -th
+Filesystem                                                   Size   Used  Avail Capacity iused      ifree %iused  Mounted on
+/dev/disk1s5                                                233Gi   10Gi  114Gi     9%  487533 2447613787    0%   /
+devfs                                                       191Ki  191Ki    0Bi   100%     662          0  100%   /dev
+/dev/disk1s1                                                233Gi  106Gi  114Gi    49% 1079565 2447021755    0%   /System/Volumes/Data
+/dev/disk1s4                                                233Gi  3.0Gi  114Gi     3%       4 2448101316    0%   /private/var/vm
+map auto_home                                                 0Bi    0Bi    0Bi   100%       0          0  100%   /System/Volumes/Data/home
+/dev/disk2s2                                                1.8Ti   86Gi  1.7Ti     5%  954625 4294012654    0%   /Volumes/My Passport for Mac
+/dev/disk1s3                                                233Gi  504Mi  114Gi     1%      48 2448101272    0%   /Volumes/Recovery
+com.apple.TimeMachine.2020-08-04-174229.local@/dev/disk1s1  233Gi  105Gi  114Gi    49% 1064227 2447037093    0%   /Volumes/com.apple.TimeMachine.localsnapshots/Backups.backupdb/MacBook Pro Menazina/2020-08-04-174229/Macintosh HD - Datos
+com.apple.TimeMachine.2020-08-04-174229.local@/dev/disk1s5  233Gi   10Gi  114Gi     9%  487533 2447613787    0%   /Volumes/com.apple.TimeMachine.localsnapshots/Backups.backupdb/MacBook Pro Menazina/2020-08-04-174229/Macintosh HD
+(base) MacBook-Pro-Menazina:lorem-copy Menazina$ git help
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone     Clone a repository into a new directory
+   init      Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add       Add file contents to the index
+   mv        Move or rename a file, a directory, or a symlink
+   restore   Restore working tree files
+   rm        Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect    Use binary search to find the commit that introduced a bug
+   diff      Show changes between commits, commit and working tree, etc
+   grep      Print lines matching a pattern
+   log       Show commit logs
+   show      Show various types of objects
+   status    Show the working tree status
+
+grow, mark and tweak your common history
+   branch    List, create, or delete branches
+   commit    Record changes to the repository
+   merge     Join two or more development histories together
+   rebase    Reapply commits on top of another base tip
+   reset     Reset current HEAD to the specified state
+   switch    Switch branches
+   tag       Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch     Download objects and refs from another repository
+   pull      Fetch from and integrate with another repository or a local branch
+   push      Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+See 'git help git' for an overview of the system.
+(base) MacBook-Pro-Menazina:lorem-copy Menazina$ git help <grep>
+-bash: syntax error near unexpected token `newline'
+(base) MacBook-Pro-Menazina:lorem-copy Menazina$ grep et/ET at.txt
+(base) MacBook-Pro-Menazina:lorem-copy Menazina$ cd lorem
+-bash: cd: lorem: No such file or directory
+(base) MacBook-Pro-Menazina:lorem-copy Menazina$ cd ..
+(base) MacBook-Pro-Menazina:lab-bash Menazina$ cd lorem
+(base) MacBook-Pro-Menazina:lorem Menazina$ ls *.txt
+at.txt		lorem.txt	sed.txt
+(base) MacBook-Pro-Menazina:lorem Menazina$ pwd
+/Users/Menazina/datamex_082020/module-1/lab-bash/lorem
+(base) MacBook-Pro-Menazina:lorem Menazina$ cat sed.txt | wc -|
+>
+>
+> cat
+wc: -: open: No such file or directory
+(base) MacBook-Pro-Menazina:lorem Menazina$ cat | wc -|
+> sed.txt
+-bash: sed.txt: command not found
+wc: -: open: No such file or directory
+
+(base) MacBook-Pro-Menazina:lorem Menazina$ pwd
+/Users/Menazina/datamex_082020/module-1/lab-bash/lorem
+(base) MacBook-Pro-Menazina:lorem Menazina$ cat sed.txt |wc -|
+> ls -count
+wc: -: open: No such file or directory
+total 24
+-rw-r--r--  1 501  873 Aug  4 09:56 sed.txt
+-rw-r--r--  1 501  448 Aug  4 09:56 lorem.txt
+-rw-r--r--  1 501  852 Aug  4 09:56 at.txt
+(base) MacBook-Pro-Menazina:lorem Menazina$ cat lorem |wc -|
+>
+> ls -count
+cat: lorem: No such file or directory
+wc: -: open: No such file or directory
+total 24
+-rw-r--r--  1 501  873 Aug  4 09:56 sed.txt
+-rw-r--r--  1 501  448 Aug  4 09:56 lorem.txt
+-rw-r--r--  1 501  852 Aug  4 09:56 at.txt
+(base) MacBook-Pro-Menazina:lorem Menazina$ grep -o "et" at.txt
