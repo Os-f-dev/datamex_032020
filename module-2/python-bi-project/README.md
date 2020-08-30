@@ -7,8 +7,10 @@ Advise a CEO of a video game studio with the search for a suitable work area in 
 As a CEO of a video game studio I want a new workspace in California, USA since my business has grown as well as the number of employees, so I need to relocate the headquarters in order to be able to place my employees in a wide place, easy to reach in any kind of transportation and with enough space to place new employees.
 
 ## Requirements
-• Close to public transportation such as bus or subway
-• That the location is in California
+• Close to public transportation such as bus or subway.
+
+• That the location is in California.
+
 • Close to other video game studios, in the city where there are more studios.
 
 ## DoD
@@ -30,5 +32,7 @@ To provide an ideal area in California where offices are available, close to pub
 
 ## Maps Description
 • The blue pins are the occupied offices.
+
 • The red pins are the available offices, and you can see the detail of the office if you click the pin.
+
 • The heatmaps show the density of the zones of occupied offices.
