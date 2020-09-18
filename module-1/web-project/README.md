@@ -2,45 +2,41 @@
 
 # Project: API and Web Data Scraping
 
-## Overview
+### Process
 
-The goal of this project is for you to practice what you have learned in the APIs and Web Scraping chapter of this program. For this project, you will choose both an API to obtain data from and a web page to scrape. For the API portion of the project will need to make calls to your chosen API, successfully obtain a response, request data, convert it into a Pandas data frame, and export it as a CSV file. For the web scraping portion of the project, you will need to scrape the HTML from your chosen page, parse the HTML to extract the necessary information, and either save the results to a text (txt) file if it is text or into a CSV file if it is tabular data.
+First I searched for a data set to work with, I used a netflix catalogue obtained from kaggle (https://www.kaggle.com/shivamb/netflix-shows) 
+With this data set I droped the columns I don't need and check the columns with missing values and make a plan to fill them either with web scraping or api.
 
-**You will be working individually for this project**, but we'll be guiding you along the process and helping you as you go. Show us what you've got!
+Then to use the OMDb API and have precise results I needed the IMDb movies id so I web scrapped IMDb site to obtain them. To do so I first tried to make a while loop obtaining each value of the titles column but I had problems and it wasn't very eficient so I made a function to obtain the id of the movies and later used an '.apply' to the data frame.
 
----
+Once I obtained the id's of the movies and tv shows it's time to use the API to retrive information. So I firs made some functions to obtain the missing information on directro's, cast and country columns because these ones has the most missing values that I could obtain from the API, also I made some functions to retrive IMDb, Rotten Tomatoes and Metacritic scores to make some analysis. Then I applied the functions to the columns and created new columns for the scores.
 
-## Technical Requirements
+It is important to mention that the retriving functions took a long time and I tried to use the multiprocessing library but on Jupyter the kenrel broke every time I tried to use it so I need to investigate to solve this problem and this could be considered a future improvement.
 
-The technical requirements for this project are as follows:
+Finally with the data frame filled with the information and the scores of each rating site I performed some analysis.
 
-* You must obtain data from an API using Python.
-* You must scrape and clean HTML from a web page using Python.
-* The results should be two files - one containing the tabular results of your API request and the other containing the results of your web page scrape.
-* Your code should be saved in a Jupyter Notebook and your results should be saved in a folder named output.
-* You should include a README.md file that describes the steps you took and your thought process for obtaining data from the API and web page.
+The pie chart tell us there are more movies than tv shows on the netflix catalogue I retrived. The catalogue has information of thv shows and movies available on Netflix as of 2019
 
-## Necessary Deliverables
+![](output/plots/MoviesVsTVShows.png)
+**Figure 1** - Movies vs Tv Shows
 
-The following deliverables should be pushed to your Github repo for this chapter.
+The horizontal barchart indicates us which are the countries with more content on the platform.
 
-* **A Jupyter Notebook (.ipynb) file** that contains the code used to work with your API and scrape your web page.
-* **An output folder** containing the outputs of your API and scraping efforts.
-* **A ``README.md`` file** containing a detailed explanation of your approach and code for retrieving data from the API and scraping the web page as well as your results, obstacles encountered, and lessons learned.
+![](output/plots/TopCountriesWithMoreContent.png)
+**Figure 2** - Top Content On Each Country
 
-## Suggested Ways to Get Started
+Also I made a line chart indicating the quantity of movies and tv shows released by year.
 
-* **Find an API to work with** - a great place to start looking would be [API List](https://apilist.fun/) and [Public APIs](https://github.com/toddmotto/public-apis). If you need authorization for your chosen API, make sure to give yourself enough time for the service to review and accept your application. Have a couple back-up APIs chosen just in case!
-* **Find a web page to scrape** and determine the content you would like to scrape from it - blogs and news sites are typically good candidates for scraping text content, and [Wikipedia](https://www.wikipedia.org/) is usually a good source for HTML tables (search for "list of...").
-* **Break the project down into different steps** - note the steps covered in the API and web scraping lessons, try to follow them, and make adjustments as you encounter the obstacles that are inevitable due to all APIs and web pages being different.
-* **Use the tools in your tool kit** - your knowledge of intermediate Python as well as some of the things you've learned in previous chapters. This is a great way to start tying everything you've learned together!
-* **Work through the lessons in class** & ask questions when you need to! Think about adding relevant code to your project each night, instead of, you know... _procrastinating_.
-* **Commit early, commit often**, don’t be afraid of doing something incorrectly because you can always roll back to a previous version.
-* **Consult documentation and resources provided** to better understand the tools you are using and how to accomplish what you want.
+![](output/plots/MoviesAndTVShowsByReleaseYear.png)
+**Figure 3** - Movies and TV Shows by Year Realese
 
-## Useful Resources
+And finally the scores of the different platforms and wich score is more offten given by the platform
 
-* [Requests Library Documentation: Quickstart](http://docs.python-requests.org/en/master/user/quickstart/)
-* [BeautifulSoup Documentation](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
-* [Stack Overflow Python Requests Questions](https://stackoverflow.com/questions/tagged/python-requests)
-* [StackOverflow BeautifulSoup Questions](https://stackoverflow.com/questions/tagged/beautifulsoup)
+![](output/plots/IMDb_ratings.png)
+**Figure 4** - IMDb Scores
+
+![](output/plots/Rotten_tomatoes_ratings.png)
+**Figure 5** - Rotten Tomatoes Scores
+
+![](output/plots/metacritic_ratings.png)
+**Figure 6** - Metacritic Scores
